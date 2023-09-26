@@ -4,22 +4,38 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="alex"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-09-26 05:22:49 "/>
+        <attribute name="saved" value="2023-09-26 10:30:37 "/>
         <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNjsiMDU6MDA6MjggIjsyMDY1"/>
-        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNjsiMDU6MjI6NDkgIjszOzIxODI="/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNjsiMTA6MzA6MzcgIjs0OzIxNzU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="base, potenza" type="Real" array="False" size=""/>
             <declare name="esponente, i" type="Integer" array="False" size=""/>
+            <declare name="espPositivo" type="Boolean" array="False" size=""/>
+            <assign variable="espPositivo" expression="true"/>
             <input variable="base"/>
             <input variable="esponente"/>
             <assign variable="potenza" expression="1"/>
+            <if expression="esponente &lt; 0">
+                <then>
+                    <assign variable="esponente" expression="- esponente"/>
+                    <assign variable="espPositivo" expression="false"/>
+                </then>
+                <else/>
+            </if>
             <for variable="i" start="1" end="esponente" direction="inc" step="1">
                 <assign variable="potenza" expression="potenza*base"/>
             </for>
-            <output expression="potenza" newline="True"/>
+            <if expression="espPositivo == true">
+                <then>
+                    <output expression="potenza" newline="True"/>
+                </then>
+                <else>
+                    <output expression="1 / potenza" newline="True"/>
+                </else>
+            </if>
         </body>
     </function>
 </flowgorithm>
