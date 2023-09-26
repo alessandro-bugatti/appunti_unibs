@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-26 04:19:25 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNjsiMDM6MDI6NTQgIjsyMDY0"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNjsiMDQ6MTk6MjUgIjsyOzIxODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="votoCentodieci, votoDieci" type="Real" array="False" size=""/>
+            <do expression="votoCentodieci&lt;1 or votoCentodieci&gt;110">
+                <input variable="votoCentodieci"/>
+            </do>
+            <assign variable="votoDieci" expression="votoCentodieci/110*10"/>
+            <output expression="votoDieci" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-26 05:17:56 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNjsiMDU6MDA6MjggIjsyMDY1"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNjsiMDU6MTc6NTYgIjsxOzIxODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="base, potenza" type="Real" array="False" size=""/>
+            <declare name="esponente, i" type="Integer" array="False" size=""/>
+            <input variable="base"/>
+            <input variable="esponente"/>
+            <assign variable="i" expression="0"/>
+            <assign variable="potenza" expression="1"/>
+            <while expression="i &lt; esponente">
+                <assign variable="i" expression="i+1"/>
+                <assign variable="potenza" expression="potenza*base"/>
+            </while>
+            <output expression="potenza" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
