@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 09:19:25 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMDg6NTY6MTEgIjsyMDcz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMDk6MTk6MjUgIjsyOzIxODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, Ninseriti, numero, contatore, somma" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="Ninseriti" expression="0"/>
+            <assign variable="contatore" expression="0"/>
+            <assign variable="somma" expression="0"/>
+            <while expression="N&gt;Ninseriti">
+                <input variable="numero"/>
+                <assign variable="Ninseriti" expression="Ninseriti+1"/>
+                <assign variable="contatore" expression="contatore+1"/>
+                <assign variable="somma" expression="somma+numero"/>
+                <if expression="contatore==4">
+                    <then>
+                        <output expression="somma" newline="True"/>
+                        <assign variable="somma" expression="0"/>
+                        <assign variable="contatore" expression="0"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <if expression="contatore!=0">
+                <then>
+                    <output expression="somma" newline="True"/>
+                    <output expression="contatore" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

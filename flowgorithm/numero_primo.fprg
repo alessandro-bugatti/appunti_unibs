@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 03:33:55 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMTA6Mjg6MzIgIjsyMDY4"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMDM6MzM6NTUgIjszOzIxODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i" type="Integer" array="False" size=""/>
+            <declare name="primo" type="Boolean" array="False" size=""/>
+            <comment text="Prima versione vista a lezione, con il for, anche se si scopre un divisore si continuano a fare controlli inutili"/>
+            <assign variable="primo" expression="true"/>
+            <input variable="N"/>
+            <for variable="i" start="2" end="N/2" direction="inc" step="1">
+                <if expression="N%i==0">
+                    <then>
+                        <assign variable="primo" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="Alternativa alla versione con il for, pi&#249; efficiente perch&#232; si ferma appena trova un divisore"/>
+            <assign variable="i" expression="2"/>
+            <assign variable="primo" expression="true"/>
+            <while expression="i&lt;N/2 and primo==true">
+                <if expression="N%i==0">
+                    <then>
+                        <assign variable="primo" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="i" expression="i+1"/>
+            </while>
+            <if expression="primo==true">
+                <then>
+                    <output expression="&quot;Il Numero &#232; primo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Il Numero non &#232; primo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

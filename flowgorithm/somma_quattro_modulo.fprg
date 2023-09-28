@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 09:22:29 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMDg6NTY6MTEgIjsyMDcz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMDk6MjI6MjkgIjs0OzIxODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, Ninseriti, numero, somma" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="Ninseriti" expression="0"/>
+            <assign variable="somma" expression="0"/>
+            <while expression="N&gt;Ninseriti">
+                <input variable="numero"/>
+                <assign variable="Ninseriti" expression="Ninseriti+1"/>
+                <assign variable="somma" expression="somma+numero"/>
+                <if expression="Ninseriti%4==0">
+                    <then>
+                        <output expression="somma" newline="True"/>
+                        <assign variable="somma" expression="0"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <if expression="Ninseriti%4!=0">
+                <then>
+                    <output expression="somma" newline="True"/>
+                    <output expression="Ninseriti" newline="True"/>
+                </then>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

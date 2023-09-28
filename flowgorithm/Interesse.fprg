@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 09:32:58 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMDk6MjQ6MTIgIjsyMDcw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMDk6MzI6NTggIjsxOzIxODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Capitale, Tasso" type="Real" array="False" size=""/>
+            <declare name="nAnni, i" type="Integer" array="False" size=""/>
+            <input variable="Capitale"/>
+            <input variable="Tasso"/>
+            <input variable="nAnni"/>
+            <for variable="i" start="1" end="nAnni" direction="inc" step="1">
+                <assign variable="Capitale" expression="Capitale+(Capitale*Tasso)"/>
+            </for>
+            <output expression="Capitale" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

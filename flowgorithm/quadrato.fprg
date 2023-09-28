@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 10:28:29 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMTA6MTY6NTAgIjsyMDY1"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yODsiMTA6Mjg6MjkgIjsxOzIxODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i" type="Integer" array="False" size=""/>
+            <declare name="Quadrato" type="Boolean" array="False" size=""/>
+            <assign variable="Quadrato" expression="false"/>
+            <input variable="N"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <if expression="N/i == i">
+                    <then>
+                        <assign variable="Quadrato" expression="true"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="Quadrato == true">
+                <then>
+                    <output expression="&quot;il numero &#233; un quadrato perfetto&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;non &#233; un quadrato perfetto&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
