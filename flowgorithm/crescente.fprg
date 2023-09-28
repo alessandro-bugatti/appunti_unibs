@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-27 02:30:46 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNzsiMDE6MjQ6MTUgIjsyMDY0"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNzsiMDI6MzA6NDYgIjszOzIxNzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, nLetture, numero, precedente" type="Integer" array="False" size=""/>
+            <declare name="crescente" type="Boolean" array="False" size=""/>
+            <assign variable="crescente" expression="true"/>
+            <input variable="n"/>
+            <input variable="precedente"/>
+            <for variable="nLetture" start="1" end="n-1" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="precedente&gt;numero">
+                    <then>
+                        <assign variable="crescente" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="precedente" expression="numero"/>
+            </for>
+            <if expression="crescente == true">
+                <then>
+                    <output expression="&quot;La sequenza &#232; crescente&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;LA sequenza non &#232; crescente&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

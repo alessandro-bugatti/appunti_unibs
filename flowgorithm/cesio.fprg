@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-27 02:42:57 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNzsiMDI6MzA6NDkgIjsyMDY5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNzsiMDI6NDI6NTcgIjsxOzIxNzk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="grammi" type="Real" array="False" size=""/>
+            <declare name="tempo, tempoDecadimento" type="Integer" array="False" size=""/>
+            <input variable="grammi"/>
+            <assign variable="tempoDecadimento" expression="30"/>
+            <assign variable="tempo" expression="0"/>
+            <while expression="grammi &gt; 0.001">
+                <assign variable="grammi" expression="grammi/2"/>
+                <assign variable="tempo" expression="tempo + tempoDecadimento"/>
+            </while>
+            <output expression="tempo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

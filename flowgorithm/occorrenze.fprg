@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-27 03:52:10 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNzsiMDM6NDI6MTcgIjsyMDY4"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0wOS0yNzsiMDM6NTI6MTAgIjsxOzIxNzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, numero, i, maggiore, molt" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <input variable="numero"/>
+            <assign variable="maggiore" expression="numero"/>
+            <assign variable="molt" expression="1"/>
+            <for variable="i" start="1" end="N-1" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="numero &gt; maggiore">
+                    <then>
+                        <assign variable="maggiore" expression="numero"/>
+                        <assign variable="molt" expression="1"/>
+                    </then>
+                    <else>
+                        <if expression="numero == maggiore">
+                            <then>
+                                <assign variable="molt" expression="molt + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="maggiore" newline="True"/>
+            <output expression="molt" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
