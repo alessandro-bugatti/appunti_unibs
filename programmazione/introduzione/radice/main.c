@@ -17,6 +17,6 @@ int main() {
             a = m;
         }
     }
-    printf("il valore della radice di %lf è %lf",N ,m);
+    printf("il valore della radice di %.10lf è %.10lf",N ,m);
     return 0;
 }
