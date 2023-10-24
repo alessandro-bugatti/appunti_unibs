@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-24 05:14:06 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyMy0xMC0yNDsiMDI6NDY6MTIgIjsyMDU1"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyMy0xMC0yNDsiMDU6MTQ6MDYgIjs0OzIxNjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, N2, temp, temp2" type="Integer" array="False" size=""/>
+            <assign variable="N" expression="123"/>
+            <assign variable="N2" expression="21"/>
+            <comment text="La parte seguente &quot;ribalta&quot; N2"/>
+            <assign variable="temp" expression="0"/>
+            <while expression="N2 &gt; 0">
+                <assign variable="temp" expression="temp * 10 + N2 % 10"/>
+                <assign variable="N2" expression="N2 / 10"/>
+            </while>
+            <comment text="Concatena N2 a N ed essendo N2 &quot;ribaltato&quot; si concatenera nel modo corretto"/>
+            <assign variable="N2" expression="temp"/>
+            <assign variable="temp" expression="N"/>
+            <while expression="N2 &gt; 0">
+                <assign variable="temp" expression="temp * 10 + N2 % 10"/>
+                <assign variable="N2" expression="N2 / 10"/>
+            </while>
+            <comment text="Ribalta temp per verificare se &#232; palindromo"/>
+            <assign variable="N" expression="temp"/>
+            <assign variable="temp2" expression="0"/>
+            <while expression="temp &gt; 0">
+                <assign variable="temp2" expression="temp2 * 10 + temp % 10"/>
+                <assign variable="temp" expression="temp / 10"/>
+            </while>
+            <output expression="N" newline="True"/>
+            <output expression="temp2" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
