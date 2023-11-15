@@ -21,9 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14652b43-4fe0-4c87-9e09-f5b156274467" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../diagonali/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diagonali/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../diagonali/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../somma/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../somma/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +89,7 @@
       <workItem from="1699978393911" duration="2215000" />
       <workItem from="1700036332194" duration="8000" />
       <workItem from="1700036361542" duration="19000" />
+      <workItem from="1700044469403" duration="3605000" />
     </task>
     <servers />
   </component>

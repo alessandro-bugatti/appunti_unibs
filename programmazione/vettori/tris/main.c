@@ -31,11 +31,11 @@ int mossa_valida(int x, int y, int tris[][DIM]){
 }
 
 void stampa_griglia(int tris[][DIM]){
-    printf("%c|%c|%c\n", simboli(tris[0][0]), simboli(tris[0][1]), simboli(tris[0][2]));
-    printf("-----\n");
-    printf("%c|%c|%c\n", simboli(tris[1][0]), simboli(tris[1][1]), simboli(tris[1][2]));
-    printf("-----\n");
-    printf("%c|%c|%c\n", simboli(tris[2][0]), simboli(tris[2][1]), simboli(tris[2][2]));
+    printf(" %c | %c | %c \n", simboli(tris[0][0]), simboli(tris[0][1]), simboli(tris[0][2]));
+    printf("-----------\n");
+    printf(" %c | %c | %c \n", simboli(tris[1][0]), simboli(tris[1][1]), simboli(tris[1][2]));
+    printf("-----------\n");
+    printf(" %c | %c | %c \n", simboli(tris[2][0]), simboli(tris[2][1]), simboli(tris[2][2]));
 }
 
 /**
@@ -49,12 +49,47 @@ void stampa_griglia(int tris[][DIM]){
  * - 0 se il gioco è in corso
  */
 int controlla_stato(int tris[][DIM]){
-
+    //Controllo delle righe
+    for (int i = 0; i < DIM; ++i) {
+        if (tris[i][0] == tris[i][1] &&
+            tris[i][1] == tris[i][2] &&
+            tris[i][0] != 0)
+            return tris[i][0];
+    }
+    //Controllo per colonne
+    for (int i = 0; i < DIM; ++i) {
+        if (tris[0][i] == tris[1][i] &&
+            tris[1][i] == tris[2][i] &&
+            tris[0][i] != 0)
+            return tris[0][i];
+    }
+    //prima diagonale
+    if (tris[0][0] == tris[1][1] &&
+        tris[1][1] == tris[2][2] &&
+        tris[0][0] != 0)
+        return tris[0][0];
+    //seconda diagonale
+    if (tris[0][2] == tris[1][1] &&
+        tris[1][1] == tris[2][0] &&
+        tris[0][2] != 0)
+        return tris[0][2];
+    for (int i = 0; i < DIM; ++i) {
+        for (int j = 0; j < DIM; ++j) {
+            if (tris[i][j] == 0)
+                return 0;
+        }
+    }
+    return 3;
 }
 
-//Seconda soluzione, con passaggio per indirizzo
+//Con passaggio per indirizzo
 void cambia_turno(int *giocatore){
-
+    if (*giocatore == 1){
+        *giocatore = 2;
+    }
+    else{
+        *giocatore = 1;
+    }
 }
 
 int main(){
@@ -66,8 +101,10 @@ int main(){
             griglia[i][j] = 0;
         }
     }
+
     stato = controlla_stato(griglia);
     while(stato == 0){
+        stampa_griglia(griglia);
         int riga, colonna;
         printf ("Tocca al giocatore %d fare la sua mossa\n", turno);
         printf ("Inserisci la riga: ");
@@ -75,11 +112,22 @@ int main(){
         printf ("Inserisci la colonna: ");
         scanf ("%d", &colonna);
         while(!mossa_valida(riga - 1, colonna - 1, griglia)){
-
+            printf("Attenzione, i valori di riga e colonna non sono corretti");
+            printf ("Inserisci la riga: ");
+            scanf ("%d", &riga);
+            printf ("Inserisci la colonna: ");
+            scanf ("%d", &colonna);
         }
         griglia[riga - 1][colonna - 1] = turno;
         stato = controlla_stato(griglia);
         cambia_turno(&turno);
+    }
+    stampa_griglia(griglia);
+    if (stato == 3){
+        printf("Pareggio");
+    }
+    else{
+        printf("Ha vinto il giocatore %d.\n", stato);
     }
 
 
