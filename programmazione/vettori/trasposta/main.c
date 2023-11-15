@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define N 3
+#define N 4
 
 int main() {
     int matrice[N][N];
@@ -12,26 +12,32 @@ int main() {
         }
     }
 
+    printf("Matrice originale\n");
+
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < N; ++j) {
-            printf("%d ", matrice[i][j]);
+            printf("%3d", matrice[i][j]);
         }
         printf("\n");
     }
 
-    int somma = 0;
-    printf("Somma della diagonale principale\n");
+    //Trasposta
     for (int i = 0; i < N; ++i) {
-        somma += matrice[i][i]; //
+        for (int j = i + 1; j < N; ++j) {
+            int temp = matrice[i][j];
+            matrice[i][j] = matrice[j][i];
+            matrice[j][i] = temp;
+        }
     }
-    printf("Diagonale principale: %d", somma);
 
-    somma = 0;
-    printf("Somma della diagonale secondaria\n");
+    printf("Matrice trasposta\n");
+
     for (int i = 0; i < N; ++i) {
-        somma += matrice[i][N - 1 - i];
+        for (int j = 0; j < N; ++j) {
+            printf("%3d", matrice[i][j]);
+        }
+        printf("\n");
     }
-    printf("Diagonale secondaria: %d", somma);
 
     return 0;
 }
