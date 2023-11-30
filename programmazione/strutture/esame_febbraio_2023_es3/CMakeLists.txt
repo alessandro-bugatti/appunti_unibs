@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.26)
+project(esame_febbraio_2023_es3 C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(esame_febbraio_2023_es3 main.c)
