@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-30 03:47:19 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0wOS0zMDsiMDM6NDE6MTcgIjsyMDYy"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0wOS0zMDsiMDM6NDc6MTkgIjsxOzIxNzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="euro, bitcoin" type="Real" array="False" size=""/>
+            <input variable="euro"/>
+            <assign variable="bitcoin" expression="euro / 3321.47"/>
+            <output expression="bitcoin" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
