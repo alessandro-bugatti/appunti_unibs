@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 03:39:46 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMTsiMDM6Mjg6MjUgIjsyMDU2"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMTsiMDM6Mzk6NDYgIjsxOzIxNjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qta" type="Real" array="False" size=""/>
+            <declare name="anni" type="Integer" array="False" size=""/>
+            <output expression="&quot;inserisci la quantit&#224; in grammi:&quot;" newline="True"/>
+            <input variable="qta"/>
+            <assign variable="anni" expression="0"/>
+            <while expression="qta&gt;0.001">
+                <assign variable="qta" expression="qta/2"/>
+                <assign variable="anni" expression="anni+30"/>
+            </while>
+            <output expression="anni" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

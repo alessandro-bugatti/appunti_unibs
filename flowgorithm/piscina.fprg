@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-01 02:41:22 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMTsiMDI6MzQ6MTcgIjsyMDUz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMTsiMDI6NDE6MjIgIjsxOzIxNTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ingressi" type="Integer" array="False" size=""/>
+            <declare name="abbonamento, biglietto" type="Real" array="False" size=""/>
+            <input variable="ingressi"/>
+            <input variable="abbonamento"/>
+            <input variable="biglietto"/>
+            <if expression="abbonamento&gt;biglietto*ingressi">
+                <then>
+                    <output expression="&quot;convine comprare biglietti&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;conviene abbonamento&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
