@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 09:58:02 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMDk6NDM6NTQgIjsyMDYz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMDk6NTg6MDIgIjsxOzIxNzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, somma, quanti" type="Integer" array="False" size=""/>
+            <assign variable="somma" expression="0"/>
+            <assign variable="quanti" expression="0"/>
+            <do expression="numero != 0">
+                <input variable="numero"/>
+                <if expression="numero != 0">
+                    <then>
+                        <assign variable="somma" expression="somma + numero"/>
+                        <assign variable="quanti" expression="quanti + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <comment text="Pensare a come farlo meglio con un while"/>
+            <output expression="somma" newline="True"/>
+            <output expression="numero" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

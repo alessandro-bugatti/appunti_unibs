@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 09:43:52 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMDk6Mjc6MDUgIjsyMDYx"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMDk6NDM6NTIgIjsxOzIxNjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="voto" type="Integer" array="False" size=""/>
+            <declare name="votoDecimi" type="Real" array="False" size=""/>
+            <do expression="voto&lt;1 || voto&gt;110">
+                <input variable="voto"/>
+            </do>
+            <comment text="Alternativa&#13;&#10;"/>
+            <input variable="voto"/>
+            <while expression="voto&lt;1 || voto&gt;110">
+                <output expression="&quot;Asinello hai sbagliato&quot;" newline="True"/>
+                <input variable="voto"/>
+            </while>
+            <assign variable="votoDecimi" expression="voto/110*10"/>
+            <output expression="votoDecimi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

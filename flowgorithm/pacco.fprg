@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 09:27:03 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMDk6MTM6MjcgIjsyMDYw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMDk6Mjc6MDMgIjsxOzIxNjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="peso, costo" type="Real" array="False" size=""/>
+            <declare name="tariffa" type="Integer" array="False" size=""/>
+            <input variable="peso"/>
+            <input variable="tariffa"/>
+            <if expression="tariffa == 1">
+                <then>
+                    <assign variable="costo" expression="3*peso + 3"/>
+                </then>
+                <else>
+                    <if expression="tariffa == 2">
+                        <then>
+                            <assign variable="costo" expression="4*peso + 7"/>
+                        </then>
+                        <else>
+                            <assign variable="costo" expression="6*peso + 13"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="costo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
