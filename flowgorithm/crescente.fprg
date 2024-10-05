@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 10:46:57 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMTA6MTQ6MDQgIjsyMDQ4"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMTA6NDY6NTcgIjsxOzIxNjk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, N, i, precedente" type="Integer" array="False" size=""/>
+            <declare name="crescente" type="Boolean" array="False" size=""/>
+            <input variable="N"/>
+            <input variable="precedente"/>
+            <assign variable="crescente" expression="true"/>
+            <for variable="i" start="1" end="N - 1" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="precedente &gt; numero">
+                    <then>
+                        <assign variable="crescente" expression="falso"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="precedente" expression="numero"/>
+            </for>
+            <if expression="crescente == true">
+                <then>
+                    <output expression="&quot; sequenza crescente &quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot; sequenza non crescente &quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

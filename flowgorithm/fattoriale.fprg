@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-03 10:58:30 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMTA6NDg6NDggIjsyMDYz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wMzsiMTA6NTg6MzAgIjsxOzIxNjM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, fattoriale, i" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="fattoriale" expression="1"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <assign variable="fattoriale" expression="fattoriale*i"/>
+            </for>
+            <output expression="fattoriale" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
