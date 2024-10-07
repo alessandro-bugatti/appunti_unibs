@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-07 03:54:26 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wNzsiMDM6NDE6MTAgIjsyMDUx"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wNzsiMDM6NTQ6MjYgIjsxOzIxNzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n, somma, prodotto, controllo, cifra, i, j" type="Integer" array="False" size=""/>
+            <assign variable="somma" expression="0"/>
+            <assign variable="prodotto" expression="1"/>
+            <input variable="n"/>
+            <for variable="i" start="1" end="3" direction="inc" step="1">
+                <for variable="j" start="1" end="3" direction="inc" step="1">
+                    <assign variable="cifra" expression="n%10"/>
+                    <assign variable="somma" expression="somma+cifra"/>
+                    <assign variable="n" expression="n/10"/>
+                </for>
+                <assign variable="prodotto" expression="prodotto*somma"/>
+                <assign variable="somma" expression="0"/>
+            </for>
+            <output expression="10-prodotto%10" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

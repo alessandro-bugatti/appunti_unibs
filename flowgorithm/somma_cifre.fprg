@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-07 03:17:28 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0xMC0wNzsiMDM6MDU6MzggIjsyMDYx"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0xMC0wNzsiMDM6MTc6MjggIjsxOzIxNzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, somma" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="somma" expression="0"/>
+            <while expression="N&gt;0">
+                <assign variable="somma" expression="somma + N%10"/>
+                <assign variable="N" expression="N/10"/>
+            </while>
+            <output expression="somma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
