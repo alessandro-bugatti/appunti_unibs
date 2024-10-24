@@ -3,8 +3,8 @@
 
 int main(void) {
     int punto, p1 = 0, p2 = 0;
-
-    while() {
+    //((p1 <= 24) && (p2 <= 24)) || abs(p1 - p2) <= 1)
+    while(!(((p1 > 24) && (p1 -p2) > 1) || ((p2 > 24) && (p2 - p1) > 1)) ) {
         printf("Inserisci la squadra che ha fatto punto (1-2): ");
         scanf("%d", &punto);
         if (punto == 1) {
