@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <tgmath.h>
 
 //Verifica se un numero è primo, ritorna 1 se lo è, 0 altrimenti
 int primo(int n) {
