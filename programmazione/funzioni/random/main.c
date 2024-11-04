@@ -13,6 +13,7 @@ int random(int a, int b) {
 
 int main(void) {
     srand(time(NULL));
-    printf("Numero casuale: %d", random(16, 20));
+    int a = 16, b = 20;
+    printf("Numero casuale: %d", random(a, b));
     return 0;
 }
