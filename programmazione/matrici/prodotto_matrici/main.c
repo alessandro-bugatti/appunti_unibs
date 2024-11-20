@@ -6,7 +6,7 @@
 void inizializza(int m[][N], int r, int c) {
     for (int i = 0; i < r; ++i) {
         for (int j = 0; j < c; ++j) {
-            m[i][j] = rand()%1000;
+            m[i][j] = rand()%10;
         }
     }
 }
@@ -14,14 +14,21 @@ void inizializza(int m[][N], int r, int c) {
 void stampa(int m[][N], int r, int c) {
     for (int i = 0; i < r; ++i) {
         for (int j = 0; j < c; ++j) {
-            printf("%6d", m[i][j]);
+            printf("%10d", m[i][j]);
         }
         printf("\n");
     }
 }
 
 void prodotto(int a[][N], int b[][N], int c[][N],int m, int n, int p) {
-
+    for (int i = 0; i < m; ++i) {
+        for (int j = 0; j < p; ++j) {
+            c[i][j] = 0;
+            for(int k = 0; k < n; ++k) {
+                c[i][j] += a[i][k] * b[k][j];
+            }
+        }
+    }
 }
 
 int main(void) {
@@ -36,6 +43,9 @@ int main(void) {
     inizializza(a, m, n);
     stampa(a,m,n);
     inizializza(b, n, p);
+    stampa(b, n, p);
+    prodotto(a, b, c, m, n, p);
+    stampa(c, m, p);
 
     return 0;
 }
