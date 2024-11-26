@@ -4,7 +4,7 @@ int is_alpha(char c) {
     if ((c >= 'A' && c <= 'Z') ||
         (c >= 'a' && c <= 'z')) {
         return 1;
-    }
+        }
     return 0;
 }
 
@@ -26,10 +26,18 @@ void pulisci_stringa(char s[]) {
     s[j] = '\0';
 }
 
-int main(void)
-{
-    char s[] = "Hello, World!";
+void cesare(char s[], int n) {
+    for (int i = 0; s[i] != '\0'; i++) {
+        //s[i] += n;
+        s[i]= (s[i] - 'a' + n) % 26 + 'a';
+    }
+}
+
+int main(void) {
+    char s[] = "Andiamo in vallez";
     pulisci_stringa(s);
-    printf("Stringa pulita: %s\n", s);
+    printf("%s\n", s);
+    cesare(s,13);
+    printf("%s\n", s);
     return 0;
 }
