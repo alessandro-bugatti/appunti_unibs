@@ -39,13 +39,13 @@ float perimetro(Triangolo t) {
             distanza(t.p3, t.p1);
 }
 
-float perimetro(Poligono p) {
+/*float perimetro(Poligono p) {
     float risultato = 0;
     for (int i = 0; i < p.n_vertici - 1; ++i) {
         risultato += distanza(p.vertici[i], p.vertici[i+1]);
     }
     risultato += distanza(p.vertici[0], p.vertici[p.n_vertici-1]);
-}
+}*/
 
 Punto punto_medio(Punto a, Punto b) {
     Punto m;
@@ -55,8 +55,24 @@ Punto punto_medio(Punto a, Punto b) {
     return m;
 }
 
+void traslaFinta(Punto p, float dx, float dy) {
+    p.x += dx;
+    p.y += dy;
+}
+
+void scambio (int *a, int *b) {
+    int temp = (*a);
+    *a = *b;
+    *b = temp;
+}
+
+void trasla(Punto *p, float dx, float dy) {
+    p->x += dx;
+    p->y += dy;
+}
+
 int main(void) {
-    Punto a, b, c;
+    /*Punto a, b, c;
     //Assegnamento, utilizzando i campi uno ad uno
     a.x = 12.4;
     a.y = 23.4;
@@ -99,5 +115,12 @@ int main(void) {
     //Funzione che ritorna una struttura
     Punto m = punto_medio(a,c);
     m = punto_medio(a, punto_medio(b,c));
+    */
+    Punto p = {2, 4};
+    traslaFinta(p, 1, 1);
+    printf("%f, %f\n", p.x, p.y);
+    trasla(&p, 1, 1);
+    printf("%f, %f\n", p.x, p.y);
+
     return 0;
 }
