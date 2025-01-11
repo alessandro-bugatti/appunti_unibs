@@ -78,7 +78,7 @@ void stampaRegistro(Registro r) {
     }
 }
 
-void stampaPassatiEsame(Registro r, char titolo) {
+void stampaPassatiEsame(Registro r, char titolo[]) {
     //Scorre tutti gli studenti
     for (int i = 0; i < r.n_studenti; ++i) {
         int trovato = 0;
