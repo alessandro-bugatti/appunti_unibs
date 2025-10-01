@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="caduta"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-01 05:10:49 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0xMC0wMTsiMDQ6NTQ6NTEgIjsyMDU2"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0wMTsiMDU6MTA6NDkgIjsxOzIxNjQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h, s, t" type="Real" array="False" size=""/>
+            <input variable="h"/>
+            <assign variable="s" expression="0"/>
+            <assign variable="t" expression="0"/>
+            <while expression="s &lt; h">
+                <assign variable="s" expression="0.5*9.8*t*t"/>
+                <assign variable="t" expression="t + 0.1"/>
+                <output expression="h - s" newline="True"/>
+            </while>
+            <output expression="t" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
