@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-30 03:33:21 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNC0wOS0zMDsiMDE6NTc6MTcgIjsyMDY3"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNC0wOS0zMDsiMDM6MzM6MjEgIjsyOzIxNjc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="base, altezza, perimetro, area" type="Integer" array="False" size=""/>
+            <input variable="base"/>
+            <input variable="altezza"/>
+            <assign variable="perimetro" expression="2*base + 2*altezza"/>
+            <assign variable="area" expression="base * altezza"/>
+            <output expression="perimetro" newline="True"/>
+            <output expression="area" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
