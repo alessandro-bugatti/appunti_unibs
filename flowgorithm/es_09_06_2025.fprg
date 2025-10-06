@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="es_09_06_2025"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-06 07:59:33 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDU6NDk6NTQgIjsyMDY5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDc6NTk6MzMgIjsxOzIxNzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, numero, conta3, i, max3, maxCifre3, temp" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="maxCifre3" expression="0"/>
+            <for variable="i" start="1" end="N" direction="inc" step="1">
+                <input variable="numero"/>
+                <assign variable="conta3" expression="0"/>
+                <assign variable="temp" expression="numero"/>
+                <while expression="numero &gt; 0">
+                    <if expression="numero % 10 == 3">
+                        <then>
+                            <assign variable="conta3" expression="conta3 + 1"/>
+                        </then>
+                        <else/>
+                    </if>
+                    <assign variable="numero" expression="numero / 10"/>
+                </while>
+                <if expression="conta3 &gt; maxCifre3">
+                    <then>
+                        <assign variable="maxCifre3" expression="conta3"/>
+                        <assign variable="max3" expression="temp"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <output expression="max3" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

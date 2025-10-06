@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="eulero"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-06 05:34:54 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDQ6NTk6MzYgIjsyMDY5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDU6MDM6MzMgIjsxO2FsZXg7Q0FMVklOOzIwMjUtMTAtMDE7IjA0OjQ0OjA1ICI7ZmF0dG9yaWFsZS5mcHJnOzU4ODA="/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDU6MzQ6NTQgIjs0OzIxNzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i, fattoriale, j" type="Integer" array="False" size=""/>
+            <declare name="eulero" type="Real" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="eulero" expression="1"/>
+            <assign variable="fattoriale" expression="1"/>
+            <for variable="i" start="1" end="N - 1" direction="inc" step="1">
+                <assign variable="fattoriale" expression="fattoriale * i"/>
+                <assign variable="eulero" expression="eulero + 1 / fattoriale"/>
+            </for>
+            <output expression="eulero" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

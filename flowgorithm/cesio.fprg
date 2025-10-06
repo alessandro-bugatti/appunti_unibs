@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cesio"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-06 04:20:54 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDQ6MTI6NTMgIjsyMDU3"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDQ6MjA6NTQgIjsxOzIxNjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="grammi" type="Real" array="False" size=""/>
+            <declare name="anni" type="Integer" array="False" size=""/>
+            <assign variable="anni" expression="0"/>
+            <input variable="grammi"/>
+            <while expression="grammi &gt; 0.001">
+                <assign variable="grammi" expression="grammi / 2"/>
+                <assign variable="anni" expression="anni + 30"/>
+            </while>
+            <output expression="anni" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

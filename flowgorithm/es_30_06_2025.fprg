@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="es_30_06_2025"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-06 05:46:39 "/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDU6MzQ6NTkgIjsyMDY4"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNS0xMC0wNjsiMDU6NDY6MzkgIjsxOzIxNzc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numero, precedente, scartati, somma" type="Integer" array="False" size=""/>
+            <assign variable="scartati" expression="0"/>
+            <input variable="precedente"/>
+            <assign variable="somma" expression="precedente"/>
+            <while expression="scartati &lt; 3">
+                <input variable="numero"/>
+                <if expression="numero &lt; precedente">
+                    <then>
+                        <assign variable="scartati" expression="scartati + 1"/>
+                    </then>
+                    <else>
+                        <assign variable="somma" expression="somma + numero"/>
+                        <assign variable="precedente" expression="numero"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="somma" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
