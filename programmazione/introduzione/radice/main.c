@@ -5,8 +5,10 @@
 
 int main(void) {
     double n, radice, a, b, m;
-    printf("Inserisci un numero maggiore o uguale a 1:");
-    scanf("%lf", &n);
+    do {
+        printf("Inserisci un numero maggiore o uguale a 1: ");
+        scanf("%lf", &n);
+    }while (n < 1);
     a = 1;
     b = n;
     while (b - a > PRECISION) {
