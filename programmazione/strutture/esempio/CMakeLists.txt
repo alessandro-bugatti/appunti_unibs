@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 4.0)
+project(esempio C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(esempio main.c)
+
+target_link_libraries(${PROJECT_NAME} m)
