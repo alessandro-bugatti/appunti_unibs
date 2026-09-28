@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="quadrato_perfetto"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-28 05:14:37 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0wOS0yODswNTowNDo1NyBQTTsyMTY1"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0wOS0yODswNToxNDozNyBQTTsxOzIyNzI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, M" type="Integer" array="False" size=""/>
+            <assign variable="M" expression="1"/>
+            <input variable="N"/>
+            <while expression="M * M &lt; N">
+                <assign variable="M" expression="M + 1"/>
+            </while>
+            <output expression="(M-1) * (M-1)" newline="True"/>
+            <output expression="M - 1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

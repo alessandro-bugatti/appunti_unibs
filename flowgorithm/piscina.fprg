@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="piscina"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-28 04:57:00 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0wOS0yODswNDo0OTozNSBQTTsyMTY5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0wOS0yODswNDo1NzowMCBQTTsxOzIyNjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="costoBiglietto, costoAbbonamento" type="Real" array="False" size=""/>
+            <declare name="nIngressi" type="Integer" array="False" size=""/>
+            <input variable="costoBiglietto"/>
+            <input variable="costoAbbonamento"/>
+            <input variable="nIngressi"/>
+            <if expression="costoBiglietto * nIngressi &gt;= costoAbbonamento">
+                <then>
+                    <output expression="&quot;Ti conviene comperare l'abbonamento&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Ti conviene comperare i biglietti singoli&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
