@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="voto"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-29 05:15:40 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0wOS0yOTswNTowMDowOSBQTTsyMTU5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0wOS0yOTswNToxNTo0MCBQTTsxOzIyNjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="voto" type="Integer" array="False" size=""/>
+            <input variable="voto"/>
+            <if expression="voto &lt; 18">
+                <then>
+                    <output expression="&quot;Da ripetere&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="voto &lt;= 24">
+                        <then>
+                            <output expression="&quot;Orale facoltativo&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Da registrare&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

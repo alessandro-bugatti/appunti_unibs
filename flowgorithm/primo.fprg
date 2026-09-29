@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="primo"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-29 04:44:21 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0wOS0yOTswNDoyMDo0NSBQTTsyMTYw"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0wOS0yOTswNDo0NDoyMSBQTTsxOzIyNjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, divisore" type="Integer" array="False" size=""/>
+            <declare name="primo" type="Boolean" array="False" size=""/>
+            <assign variable="primo" expression="true"/>
+            <assign variable="divisore" expression="2"/>
+            <input variable="N"/>
+            <while expression="divisore &lt; N / 2 &amp;&amp; primo == true">
+                <if expression="N % divisore == 0">
+                    <then>
+                        <assign variable="primo" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="divisore" expression="divisore + 1"/>
+            </while>
+            <if expression="primo == true">
+                <then>
+                    <output expression="&quot;Primo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Non primo&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

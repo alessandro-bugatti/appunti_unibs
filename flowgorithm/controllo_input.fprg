@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="controllo_input"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-29 10:04:29 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0wOS0yOTswNTozNjowMCBQTTsyMTU5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0wOS0yOTsxMDowNDoyOSBQTTsyOzIyNzA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="voto" type="Integer" array="False" size=""/>
+            <do expression="voto &lt; 1 || voto &gt; 110">
+                <input variable="voto"/>
+            </do>
+            <comment text="Soluzione alternativa con while"/>
+            <input variable="voto"/>
+            <while expression="voto &lt; 1 || voto &gt; 110">
+                <output expression="&quot;Errore, reinserisci il voto&quot;" newline="True"/>
+                <input variable="voto"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

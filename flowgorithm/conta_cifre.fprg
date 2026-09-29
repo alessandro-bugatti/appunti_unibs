@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="conta_cifre"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-09-29 04:20:10 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0wOS0yOTswNDoxMTowNyBQTTsyMTU4"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0wOS0yOTswNDoyMDoxMCBQTTsxOzIyNjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, conta" type="Integer" array="False" size=""/>
+            <assign variable="conta" expression="0"/>
+            <input variable="N"/>
+            <while expression="N&gt;0">
+                <assign variable="N" expression="N / 10"/>
+                <assign variable="conta" expression="conta + 1"/>
+            </while>
+            <output expression="conta" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
