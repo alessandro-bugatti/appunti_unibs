@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="radice_quadrata"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-01 12:58:10 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMTsxMjozODowOCBQTTsyMTQ5"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMTsxMjo1ODoxMCBQTTsxOzIyNTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, a, b, m" type="Real" array="False" size=""/>
+            <input variable="N"/>
+            <assign variable="a" expression="0"/>
+            <assign variable="b" expression="N"/>
+            <while expression="b - a &gt; 0.001">
+                <assign variable="m" expression="(a + b) / 2"/>
+                <if expression="m * m &gt; N">
+                    <then>
+                        <assign variable="b" expression="m"/>
+                    </then>
+                    <else>
+                        <assign variable="a" expression="m"/>
+                    </else>
+                </if>
+            </while>
+            <output expression="m" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

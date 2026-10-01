@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="fibonacci"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-01 11:49:30 AM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMTsxMTozNDozOSBBTTsyMTMz"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMTsxMTo0OTozMCBBTTsxOzIyMzg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Fn, Fn1, Fn2, N, i" type="Integer" array="False" size=""/>
+            <assign variable="fn2" expression="0"/>
+            <assign variable="fn1" expression="1"/>
+            <input variable="N"/>
+            <for variable="i" start="2" end="N" direction="inc" step="1">
+                <assign variable="Fn" expression="Fn1 + Fn2"/>
+                <assign variable="Fn2" expression="Fn1"/>
+                <assign variable="Fn1" expression="Fn"/>
+            </for>
+            <output expression="Fn" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="crescente"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-01 12:37:42 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMTsxMjoyMjoyMCBQTTsyMTM2"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMTsxMjozNzo0MiBQTTsxOzIyNTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i, numero, prec" type="Integer" array="False" size=""/>
+            <declare name="crescente" type="Boolean" array="False" size=""/>
+            <assign variable="crescente" expression="true"/>
+            <input variable="N"/>
+            <input variable="numero"/>
+            <assign variable="prec" expression="numero"/>
+            <for variable="i" start="1" end="N - 1" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="prec &gt; numero">
+                    <then>
+                        <assign variable="crescente" expression="false"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="prec" expression="numero"/>
+            </for>
+            <if expression="crescente == true">
+                <then>
+                    <output expression="&quot;Crescente&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Non crescente&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

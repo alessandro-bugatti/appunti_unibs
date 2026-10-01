@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="massimo_occorrenze"/>
+        <attribute name="authors" value="alex"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-01 12:21:03 PM"/>
+        <attribute name="created" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMTsxMTo1MDo1MSBBTTsyMTI1"/>
+        <attribute name="edited" value="YWxleDtDQUxWSU47MjAyNi0xMC0wMTsxMjoyMTowMyBQTTsxOzIyNDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N, i, numero, massimo, quanti" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <input variable="numero"/>
+            <assign variable="massimo" expression="numero"/>
+            <assign variable="quanti" expression="1"/>
+            <for variable="i" start="1" end="N - 1" direction="inc" step="1">
+                <input variable="numero"/>
+                <if expression="numero &gt; massimo">
+                    <then>
+                        <assign variable="massimo" expression="numero"/>
+                        <assign variable="quanti" expression="1"/>
+                    </then>
+                    <else>
+                        <if expression="numero == massimo">
+                            <then>
+                                <assign variable="quanti" expression="quanti + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </for>
+            <output expression="massimo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
