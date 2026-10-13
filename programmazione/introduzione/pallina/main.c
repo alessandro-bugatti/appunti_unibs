@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main(void) {
     float H;
     int n_rimbalzi = 0;
