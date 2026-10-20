@@ -16,6 +16,21 @@ int main(void) {
     else {
         giorni_del_mese = 31;
     }
+    //Alternativa equivalente con switch
+    switch (mese) {
+    case 2:
+        giorni_del_mese = 28;
+        break;
+    case 11:
+    case 4:
+    case 6:
+    case 9:
+        giorni_del_mese = 30;
+        break;
+    default:
+        giorni_del_mese = 31;
+    }
+
     //Spazi per far iniziare correttamente il primo giorno
     for (int i = 0; i < giorno - 1; ++i) {
         printf("    ");
