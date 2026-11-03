@@ -1,7 +1,8 @@
-#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 
 //Produce un numero casuale da 1 a n
-int random(int n) {
+int random_dado(int n) {
     return rand() % n + 1;
 }
 
@@ -12,7 +13,7 @@ int random_intervallo(int a, int b) {
 
 int main() {
 
-    std::cout << random(6) << std::endl;
-    std::cout << random_intervallo(-898, 100) << std::endl;
+    printf("%d\n", random_dado(6));
+    printf("%d\n", random_intervallo(-898, 100));
     return 0;
 }
