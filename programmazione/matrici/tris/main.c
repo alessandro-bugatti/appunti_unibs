@@ -78,12 +78,22 @@ int vittoria(int t[][N], int n) {
     return 3;
 }
 
+int mossa_valida(int t[][N], int n, int r, int c) {
+    if (r < 0 || r >= n) {
+        return 0;
+    }
+    if (c < 0 || c >= N) {
+        return 0;
+    }
+    if (t[r][c] != 0) {
+        return 0;
+    }
+    return 1;
+}
+
 int main(void) {
     int tris[N][N], giocatore = 1;
     inizializza(tris, N);
-    stampa(tris, N);
-    tris[1][1] = 0;
-    stampa(tris, N);
     while (!vittoria(tris, N)) {
         int r, c;
         stampa(tris, N);
@@ -91,6 +101,12 @@ int main(void) {
         printf("Inserisci la casella su cui vuoi mettere il segno: ");
         scanf("%d", &r);
         scanf("%d", &c);
+        while (!mossa_valida(tris, N, r - 1, c - 1)) {
+            printf("Mossa non valida\n");
+            printf("Inserisci la casella su cui vuoi mettere il segno: ");
+            scanf("%d", &r);
+            scanf("%d", &c);
+        }
         //Si suppone che il giocatore veda le caselle a partire da 1
         tris[r - 1][c - 1] = giocatore;
         if (giocatore == 1) {
@@ -101,5 +117,12 @@ int main(void) {
     }
     stampa(tris, N);
     // if di controllo della vittoria
+    int risultato = vittoria(tris, N);
+    if (risultato == 3) {
+        printf("Patta\n");
+    }
+    else {
+        printf("Ha vinto il giocatore %d\n", risultato);
+    }
     return 0;
 }
