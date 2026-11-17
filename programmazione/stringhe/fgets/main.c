@@ -14,6 +14,7 @@ int main(void) {
         n = n * 10 + (s[i] - '0');
     }
     printf("%d\n", n);
+    puts(s);
 
     return 0;
 }
