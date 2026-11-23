@@ -46,7 +46,7 @@ float perimetro_poligono(Poligono p) {
         distanza(p.vertici[0], p.vertici[p.n_vertici - 1]);
 }
 
-int main(void) {
+int esempi (void) {
     /*struct{
         float x;
         float y;
@@ -65,12 +65,27 @@ int main(void) {
     t.b = p;
     t.c = r;
     Poligono esagono;
+    esagono.n_vertici = 6;
     esagono.vertici[0] = p;
     esagono.vertici[1] = r;
     esagono.vertici[2] = p;
     esagono.vertici[3] = p;
     esagono.vertici[4] = p;
     esagono.vertici[5] = p;
-    esagono.n_vertici = 6;
+    return 0;
+}
+
+int main(void) {
+    Poligono p;
+    printf("Quanti lati vuoi che abbia il poligono: ");
+    scanf("%d", &p.n_vertici);
+     for (int i = 0; i < p.n_vertici; ++i) {
+         printf("Inserisci la x del vertice %d: ", i + 1);
+         scanf("%f", &p.vertici[i].x);
+         printf("Inserisci la y del vertice %d: ", i + 1);
+         scanf("%f", &p.vertici[i].y);
+     }
+    printf("Il perimetro del poligono inserito vale %f\n",
+        perimetro_poligono(p));
     return 0;
 }
