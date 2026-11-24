@@ -46,6 +46,11 @@ float perimetro_poligono(Poligono p) {
         distanza(p.vertici[0], p.vertici[p.n_vertici - 1]);
 }
 
+void trasla_punto(Punto *p, float dx, float dy) {
+    p->x += dx;
+    p->y += dy;
+}
+
 int esempi (void) {
     /*struct{
         float x;
@@ -76,6 +81,10 @@ int esempi (void) {
 }
 
 int main(void) {
+    Punto pu = {2, 2};
+    trasla_punto(&pu, 1, 1);
+    printf("%.1f %.1f\n", pu.x, pu.y);
+    return 0;
     Poligono p;
     printf("Quanti lati vuoi che abbia il poligono: ");
     scanf("%d", &p.n_vertici);
